@@ -29,8 +29,8 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.AllConte
 
         LayoutInflater mnLayoutInflator = LayoutInflater.from(parent.getContext());
         View itemView = mnLayoutInflator.inflate(R.layout.custom_card,parent,false);
-        AllContentViewHolder allSongs = new AllContentViewHolder(itemView);
-        return allSongs;
+        AllContentViewHolder temp = new AllContentViewHolder(itemView);
+        return temp;
     }
 
     @Override
