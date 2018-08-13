@@ -59,13 +59,12 @@ public class ContentFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        serviceProvider.add( new ServiceProvider("Amresh Raina","1000"));
+        serviceProvider.add( new ServiceProvider("Amresh Raina","1000"));
+        serviceProvider.add( new ServiceProvider("Amresh Raina","1000"));
+        serviceProvider.add( new ServiceProvider("Amresh Raina","1000"));
+        serviceProvider.add( new ServiceProvider("Amresh Raina","1000"));
 
-        serviceProvider.add( new ServiceProvider("Amresh Raina","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider.add(new ServiceProvider("Brajesh Raina","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider.add(new ServiceProvider("Ramesh Raina","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider.add(new ServiceProvider("Mahesh Raina","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider.add(new ServiceProvider("Kamlesh Raina","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider.add(new ServiceProvider("Vikas Raina","9:00AM to 6:00PM", "Indrapuri"));
         String value=null;
 //        value=getArguments().getString("HOSTEL");
 //        Toast.makeText(myactivity, value, Toast.LENGTH_LONG).show();
@@ -79,17 +78,11 @@ public class ContentFragment extends Fragment {
             contentList.setAdapter(contentAdapter);
             contentAdapter.notifyDataSetChanged();
         }
-        serviceProvider1.add(new ServiceProvider("Sameer Boys Hostel","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider1.add(new ServiceProvider("Ravi Girls Hostel","9:00AM to 6:00PM", "MP Nagar"));
-        serviceProvider1.add(new ServiceProvider("Qwerty Boys Hostel","9:00AM to 6:00PM", "Minal Residency"));
-        serviceProvider1.add( new ServiceProvider("Sameer Boys Hostel","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider1.add(new ServiceProvider("Sameer Boys Hostel","9:00AM to 6:00PM", "Indrapuri"));
-        serviceProvider1.add(new ServiceProvider("Sameer Boys Hostel","9:00AM to 6:00PM", "Indrapuri"));
 
         value=getArguments().getString("HOSTEL");
         if(value=="hostel"){
             myactivity.setTitle("Hostels");
-            contentAdapter=new ContentAdapter(myactivity,serviceProvider1);
+            contentAdapter=new ContentAdapter(myactivity,serviceProvider);
             contentList.setHasFixedSize(true);
             contentList.setLayoutManager(new LinearLayoutManager(myactivity));
             contentList.setItemAnimator(new DefaultItemAnimator());

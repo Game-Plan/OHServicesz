@@ -37,8 +37,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.AllConte
     public void onBindViewHolder(@NonNull AllContentViewHolder holder, final int position) {
         final ServiceProvider serviceProvider = details.get(position);
         holder.name.setText(serviceProvider.getName());
-        holder.activeHours.setText(serviceProvider.getHours());
-        holder.Address.setText(serviceProvider.getAddress());
+        holder.rent.setText(serviceProvider.getRent());
         holder.content_Holder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,8 +64,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.AllConte
         }
 
         TextView name=itemView.findViewById(R.id.name);
-        TextView activeHours=itemView.findViewById(R.id.hours);
-        TextView Address=itemView.findViewById(R.id.address);
+        TextView rent=itemView.findViewById(R.id.priceValue);
         RelativeLayout content_Holder=itemView.findViewById(R.id.card);
 
     }
